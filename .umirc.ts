@@ -12,7 +12,6 @@ const config: IConfig =  {
       antd: true,
       dva: false,
       dynamicImport: { webpackChunkName: true },
-      exportStatic: true,
       title: 'MathJaxPlayground',
       dll: true,
       locale: {
