@@ -12,7 +12,7 @@ const config: IConfig =  {
       antd: true,
       dva: false,
       dynamicImport: { webpackChunkName: true },
-      title: 'MathJaxPlayground',
+      title:{defaultTitle: 'MathJaxPlayground'},
       dll: true,
       locale: {
         enable: true,

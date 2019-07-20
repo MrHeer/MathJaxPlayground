@@ -1,23 +1,17 @@
-
-.normal {
-  font-family: Georgia, sans-serif;
-  margin-top: 4em;
-  text-align: center;
+.context {
+    padding: 20px;
 }
 
-.welcome {
-  height: 328px;
-  background: url(../assets/yay.jpg) no-repeat center 0;
-  background-size: 388px 328px;
+.editor {
+    height: -webkit-fill-available;
 }
 
-.list {
-  font-size: 1.2em;
-  margin-top: 1.8em;
-  list-style: none;
-  line-height: 1.5em;
+.textarea {
+    background-color: antiquewhite;
+    height: -webkit-fill-available !important;
 }
 
-.list code {
-  background: #f7f7f7;
+.display {
+    background-color: antiquewhite;
+    height: -webkit-fill-available;
 }

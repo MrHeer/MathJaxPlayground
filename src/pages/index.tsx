@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
+import { Row, Col, Card } from 'antd';
+import { Input } from 'antd';
+import MathJax from 'react-mathjax2';
 import styles from './index.css';
-import { formatMessage } from 'umi-plugin-locale';
 
-export default function() {
-  return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-          <a href="https://umijs.org/guide/getting-started.html">
-            {formatMessage({ id: 'index.start' })}
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
+const { TextArea } = Input;
+
+const tex = `f(x) = \\int_{-\\infty}^\\infty
+    \\hat f(\\xi)\\,e^{2 \\pi i \\xi x}
+    \\,d\\xi`;
+
+class Playground extends React.Component {
+
+  state = {
+    inputTex: tex,
+  }
+
+  handleInput = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    this.setState({
+      inputTex: e.target.value,
+    });
+  }
+
+  render() {
+    return (
+      <Row gutter={20} className={styles.context}>
+        <Col span={12} className={styles.editor}>
+          <TextArea defaultValue={tex} onChange={this.handleInput} className={styles.textarea} />
+        </Col>
+        <Col span={12}>
+          <Card className={styles.display}>
+            <MathJax.Context input='tex'>
+              <MathJax.Node>{this.state.inputTex}</MathJax.Node>
+            </MathJax.Context>
+          </Card>
+        </Col>
+      </Row>
+    );
+  }
 }
+
+export default Playground;
