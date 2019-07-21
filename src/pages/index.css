@@ -1,17 +1,28 @@
 .context {
-    padding: 20px;
-}
-
-.editor {
-    height: -webkit-fill-available;
+    padding: 16px;
 }
 
 .textarea {
+    margin-top: 8px;
+    margin-bottom: 8px;
     background-color: antiquewhite;
-    height: -webkit-fill-available !important;
+    resize: none;
+    height: 72vh !important;
 }
 
 .display {
+    margin-top: 8px;
+    margin-bottom: 8px;
     background-color: antiquewhite;
-    height: -webkit-fill-available;
+    height: 72vh !important;
+}
+
+@media (max-width: 768px) {
+    .textarea {
+        height: 36vh !important;
+    }
+
+    .display {
+        height: 36vh !important;
+    }
 }

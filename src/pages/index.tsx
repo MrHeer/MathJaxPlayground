@@ -24,11 +24,11 @@ class Playground extends React.Component {
 
   render() {
     return (
-      <Row gutter={20} className={styles.context}>
-        <Col span={12} className={styles.editor}>
+      <Row gutter={16} className={styles.context}>
+        <Col className={styles.col} sm={12} xs={24}>
           <TextArea defaultValue={tex} onChange={this.handleInput} className={styles.textarea} />
         </Col>
-        <Col span={12}>
+        <Col className={styles.col} sm={12} xs={24}>
           <Card className={styles.display}>
             <MathJax.Context input='tex'>
               <MathJax.Node>{this.state.inputTex}</MathJax.Node>
