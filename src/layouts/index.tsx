@@ -4,7 +4,7 @@ import { FormattedMessage } from 'umi/locale';
 
 const BasicLayout: React.FC = props => {
   return (
-    <div className={styles.normal}>
+    <div>
       <h1 className={styles.title}><FormattedMessage id='index.title' /></h1>
       {props.children}
     </div>

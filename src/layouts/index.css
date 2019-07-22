@@ -1,7 +1,4 @@
-.normal {
-  font-family: Georgia, sans-serif;
-  text-align: center;
-}
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
 
 .title {
   font-size: 2.5rem;
@@ -9,4 +6,7 @@
   letter-spacing: -1px;
   padding: .6em 0;
   margin: 0;
+  text-align: center;
+  font-family: 'Playfair Display', georgia, serif;
+  font-style: italic;
 }

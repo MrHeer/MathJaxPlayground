@@ -15,6 +15,7 @@
     margin-bottom: 8px;
     background-color: antiquewhite;
     height: 72vh !important;
+    overflow: auto;
 }
 
 @media (max-width: 768px) {
