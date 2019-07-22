@@ -1,4 +1,5 @@
 {
+  "name": "mathjax_playground",
   "private": true,
   "scripts": {
     "start": "umi dev",

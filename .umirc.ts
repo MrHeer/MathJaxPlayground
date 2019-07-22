@@ -23,6 +23,9 @@ const config: IConfig =  {
           /components\//,
         ],
       },
+      pwa: {
+        importWorkboxFrom: 'local'
+      },
     }],
   ],
 }
