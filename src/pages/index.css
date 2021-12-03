@@ -1,29 +1,18 @@
-.context {
-    padding: 16px;
+.content {
+  height: 100%;
+  width: 100%;
+  padding: 16px;
 }
 
 .textarea {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    background-color: antiquewhite;
-    resize: none;
-    height: 72vh !important;
+  height: 100% !important;
+  background-color: antiquewhite;
+  border: none;
+  resize: none;
 }
 
 .display {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    background-color: antiquewhite;
-    height: 72vh !important;
-    overflow: auto;
-}
-
-@media (max-width: 768px) {
-    .textarea {
-        height: 36vh !important;
-    }
-
-    .display {
-        height: 36vh !important;
-    }
+  height: 100%;
+  background-color: antiquewhite;
+  overflow: auto;
 }

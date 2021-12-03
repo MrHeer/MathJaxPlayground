@@ -1,4 +1,3 @@
 export default {
-  'index.start': 'Getting Started',
-  'index.title': 'MathJax Playground'
-}
+  'index.title': 'MathJax Playground',
+};

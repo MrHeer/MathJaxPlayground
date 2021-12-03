@@ -1,15 +1,19 @@
 import React from 'react';
 import styles from './index.css';
-import { FormattedMessage } from 'umi/locale';
+import { useIntl } from 'umi';
+import { Typography, Layout } from 'antd';
 
-const BasicLayout: React.FC = props => {
+const BasicLayout: React.FC = (props) => {
+  const intl = useIntl();
   return (
-    <div>
-      <h1 className={styles.title}>
-        <FormattedMessage id="index.title" />
-      </h1>
-      {props.children}
-    </div>
+    <Layout className={styles.layout}>
+      <Layout.Header className={styles.header}>
+        <Typography.Title className={styles.title}>
+          {intl.formatMessage({ id: 'index.title' })}
+        </Typography.Title>
+      </Layout.Header>
+      <Layout.Content>{props.children}</Layout.Content>
+    </Layout>
   );
 };
 

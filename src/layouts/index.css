@@ -1,11 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
 
+.layout {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .title {
-  font-size: 2.5rem;
-  font-weight: normal;
-  letter-spacing: -1px;
-  padding: .6em 0;
-  margin: 0;
+  padding-top: 8px;
   text-align: center;
   font-family: 'Playfair Display', georgia, serif;
   font-style: italic;

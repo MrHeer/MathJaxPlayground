@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import { Input } from 'antd';
 import MathJax from 'react-mathjax2';
 import styles from './index.css';
@@ -11,29 +11,35 @@ const tex = `f(x) = \\int_{-\\infty}^\\infty
     \\,d\\xi`;
 
 class Playground extends React.Component {
-
   state = {
     inputTex: tex,
-  }
+  };
 
   handleInput = (e: ChangeEvent<HTMLTextAreaElement>) => {
     this.setState({
       inputTex: e.target.value,
     });
-  }
+  };
 
   render() {
     return (
-      <Row gutter={16} className={styles.context}>
-        <Col sm={12} xs={24}>
-          <TextArea defaultValue={tex} onChange={this.handleInput} className={styles.textarea} />
+      <Row gutter={[16, 16]} className={styles.content}>
+        <Col xs={24} xl={12} style={{ height: '100%' }}>
+          <div style={{ height: '100%' }}>
+            <TextArea
+              autoSize={false}
+              defaultValue={tex}
+              onChange={this.handleInput}
+              className={styles.textarea}
+            />
+          </div>
         </Col>
-        <Col sm={12} xs={24}>
-          <Card className={styles.display}>
-            <MathJax.Context input='tex'>
+        <Col xs={24} xl={12} style={{ height: '100%' }}>
+          <div className={styles.display}>
+            <MathJax.Context input="tex">
               <MathJax.Node>{this.state.inputTex}</MathJax.Node>
             </MathJax.Context>
-          </Card>
+          </div>
         </Col>
       </Row>
     );
