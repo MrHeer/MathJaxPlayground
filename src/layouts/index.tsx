@@ -1,9 +1,8 @@
-import React from 'react';
 import styles from './index.css';
 import { useIntl } from 'umi';
 import { Typography, Layout } from 'antd';
 
-const BasicLayout: React.FC = (props) => {
+const BasicLayout: React.FC = props => {
   const intl = useIntl();
   return (
     <Layout className={styles.layout}>
