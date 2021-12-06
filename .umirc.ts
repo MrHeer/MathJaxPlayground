@@ -1,6 +1,8 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
+  base: '/MathJaxPlayground/',
+  publicPath: '/MathJaxPlayground/',
   nodeModulesTransform: {
     type: 'none',
   },
